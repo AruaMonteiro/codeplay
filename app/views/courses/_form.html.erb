@@ -1,0 +1,40 @@
+<%= form_with model: course do |form| %>
+  <div>
+    <%= form.label :name, 'Nome' %><br>
+    <%= form.text_field :name %>
+    <% course.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description, 'Descrição' %><br>
+    <%= form.text_area :description %>
+    
+  </div>
+
+  <div>
+    <%= form.label :code, 'Código' %><br>
+    <%= form.text_field :code %>
+    <% course.errors.full_messages_for(:code).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :price, 'Preço' %><br>
+    <%= form.number_field :price %>
+    <% course.errors.full_messages_for(:price).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :enrollment_deadline, 'Data limite de matrícula' %><br>
+    <%= form.date_field :enrollment_deadline %>
+  </div>
+
+  <div>
+    <%= form.submit 'Criar curso' %>
+  </div>
+<% end %>
