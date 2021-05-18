@@ -21,6 +21,11 @@
   </div>
 
   <div>
+    <%= form.label :profile_picture, 'Foto de perfil' %>
+    <%= form.file_field :profile_picture %>
+  </div>
+
+  <div>
     <%= form.submit 'Cadastrar professor' %>
   </div>
 <% end %>

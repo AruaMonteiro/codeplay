@@ -17,7 +17,7 @@ describe 'Admin view instructors' do
   it 'and view details' do
     instructor = Instructor.create!(name: 'Joao', email: 'joao@joao.com',
                    bio: 'Eu sou o Joao, professor de ruby')
-    # instructor.profile_picture.attach(io: File.open(Rails.root.join('spec', 'support', 'profile.png')), filename: 'profile.png')
+    instructor.profile_picture.attach(io: File.open(Rails.root.join('spec', 'support', 'profile.png')), filename: 'profile.png')
     visit root_path
     click_on 'Professores'
     click_on 'Joao'

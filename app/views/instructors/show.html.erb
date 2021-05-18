@@ -1,3 +1,6 @@
+<% if @instructor.profile_picture.persisted?%>
+  <%= image_tag @instructor.profile_picture %>
+<% end%>
 <h1><%= @instructor.name %></h1>
 <p><%= @instructor.email %></p>
 <p><%= @instructor.bio %></p>

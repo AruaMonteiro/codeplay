@@ -17,12 +17,14 @@ describe 'Admin registers inspectors' do
     fill_in 'Nome', with: 'Aruã'
     fill_in 'Email', with: 'arua@arua.com'
     fill_in 'Descrição', with: 'sou um professor maneiro'
+    attach_file 'Foto de perfil', Rails.root.join('spec', 'support', 'profile.png')
     click_on 'Cadastrar professor'
 
     expect(current_path).to eq(instructor_path(Instructor.last))
     expect(page).to have_content('Aruã')
     expect(page).to have_content('arua@arua.com')
     expect(page).to have_content('sou um professor maneiro')
+    expect(page).to have_css('img[src*="profile.png"]')
     expect(page).to have_link('Voltar')
   end
 
