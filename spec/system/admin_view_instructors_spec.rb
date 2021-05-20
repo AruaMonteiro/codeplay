@@ -25,6 +25,7 @@ describe 'Admin view instructors' do
     expect(page).to have_content('Joao')
     expect(page).to have_content('joao@joao.com')
     expect(page).to have_content('Eu sou o Joao, professor de ruby')
+    expect(page).to have_css('img[src*="profile.png"]')
   end
 
   it 'and no instructor is available' do

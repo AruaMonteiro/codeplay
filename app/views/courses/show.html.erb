@@ -5,4 +5,6 @@
 <% if @course.enrollment_deadline %>
   <p><%= @course.enrollment_deadline.strftime("%d/%m/%Y")%></p>
 <% end %>
+<%= link_to 'Editar', edit_course_path(@course) %>
+<%= link_to 'Apagar', @course, method: :delete %>
 <%= link_to 'Voltar', courses_path %>
