@@ -1,0 +1,28 @@
+<nav
+  class="navbar is-primary is-fixed-top py-1 px-5"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <%= link_to 'CodePlay', root_path, class: "navbar-item is-size-3 has-text-weight-bold" %>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <%= link_to 'Cursos', courses_path, class: "navbar-item is-size-5" %>
+      <%= link_to 'Professores', instructors_path, class: "navbar-item is-size-5" %>
+    </div>
+  </div>
+</nav>
