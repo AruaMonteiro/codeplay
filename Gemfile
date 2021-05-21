@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 #A modern CSS framework based on Flexbox
 gem 'bulma-rails', '~> 0.9.1'
 
